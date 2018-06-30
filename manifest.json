@@ -1,12 +1,13 @@
 {
   "manifest_version":2
   ,"name":"t.co bypass for twitter.com and tweetdeck.com"
-  ,"description":"don't like t.co redirect? try this out"
-  ,"version":"1.0.16"
+  ,"description":"don't like t.co redirects? try this out"
+  ,"version":"0.1"
   ,"content_scripts":[
     {
-      "matches":["https://twitter.com/*", "https://tweetdeck.com/*", "https://tweetdeck.twitter.com/*"]
-      ,"js":["greasemonkey.user.js"]
+      "matches":["https://twitter.com/*", "https://tweetdeck.com/*", "https://tweetdeck.twitter.com/*", "https://t.co/*"]
+      ,"js":["greasemonkey.user.js", "chromeRedirector.js"]
+      ,"all_frames": true
     }
   ]
 }
