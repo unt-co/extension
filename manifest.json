@@ -3,10 +3,16 @@
   ,"name":"t.co bypass for twitter.com and tweetdeck.com"
   ,"description":"don't like t.co redirects? try this out"
   ,"version":"0.1"
+  ,"permissions": [
+    "<all_urls>",
+    "webRequest",
+    "webRequestBlocking"
+  ]
+  , "background": {"scripts":["chromeRedirector.js"]}
   ,"content_scripts":[
     {
       "matches":["https://twitter.com/*", "https://tweetdeck.com/*", "https://tweetdeck.twitter.com/*", "https://t.co/*"]
-      ,"js":["greasemonkey.user.js", "chromeRedirector.js"]
+      ,"js":["greasemonkey.user.js"]
       ,"all_frames": true
     }
   ]
